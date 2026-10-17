@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/yaroslav/Desktop/lab07/lab07.csproj": {}
+    "C:\\Users\\user\\Desktop\\lab07_prod\\lab07.csproj": {}
   },
   "projects": {
-    "/Users/yaroslav/Desktop/lab07/lab07.csproj": {
+    "C:\\Users\\user\\Desktop\\lab07_prod\\lab07.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yaroslav/Desktop/lab07/lab07.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\lab07_prod\\lab07.csproj",
         "projectName": "lab07",
-        "projectPath": "/Users/yaroslav/Desktop/lab07/lab07.csproj",
-        "packagesPath": "/Users/yaroslav/.nuget/packages/",
-        "outputPath": "/Users/yaroslav/Desktop/lab07/obj/",
+        "projectPath": "C:\\Users\\user\\Desktop\\lab07_prod\\lab07.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\lab07_prod\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/yaroslav/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.401/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
