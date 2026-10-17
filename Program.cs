@@ -195,14 +195,37 @@
 
 //Самостоятельные задания
 // задание 1
-string a = "Меч";
-string b = "Щит";
-Console.WriteLine($"До обмена: {a} {b}");
-void ads(ref string a, ref string b)
+// string a = "Меч";
+// string b = "Щит";
+// Console.WriteLine($"До обмена: {a} {b}");
+// void ads(ref string a, ref string b)
+// {
+//     string i = a;
+//     a = b;
+//     b = i;
+// }
+// ads(ref a, ref b);
+// Console.WriteLine($"После обмена: {a} {b}");
+// задача 2 покупка
+void pokupka(ref int a, int b, out string status, out int ostatok)
 {
-    string i = a;
-    a = b;
-    b = i;
+    if (a > b)
+    {
+        a = a - b;
+        ostatok = a;
+        status = "Успешно";
+
+    }
+    else
+    {
+        status = "Отказано";
+        ostatok = a;
+    }
+    
+
 }
-ads(ref a, ref b);
-Console.WriteLine($"После обмена: {a} {b}");
+int balance = 5000;
+int cena = 325;
+pokupka(ref balance, cena, out string status, out int ostatok);
+Console.WriteLine($"{status}, остаток: {ostatok}");
+
