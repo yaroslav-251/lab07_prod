@@ -42,18 +42,20 @@
 //     public int Armor;
 // }
 // шаг 5
-using System.Drawing;
-using System.Linq.Expressions;
+// using System.Drawing;
+// using System.Linq.Expressions;
 
-void df (string a, string b, string color = "white", int weight = 180){
-Console.WriteLine($"персонаж {a} из локации {b} имеет цвет {color} рост {weight}");
-}
+// void df (string a, string b, string color = "white", int weight = 180){
+// Console.WriteLine($"персонаж {a} из локации {b} имеет цвет {color} рост {weight}");
+// }
 
-string a = "Ярослав";
-string b = "дом";
-string color = "зеленый";
-int h = 200;
-df(a, b);
-df(a, b, color);
-df(a, b, color, h);
-df(a, b, h, color);
+// string a = "Ярослав";
+// string b = "дом";
+// string color = "зеленый";
+// int h = 200;
+// df(a, b);
+// df(a, b, color);
+// df(a, b, color, h);
+// итоговая задача
+
+
