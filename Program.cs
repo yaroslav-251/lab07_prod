@@ -207,25 +207,100 @@
 // ads(ref a, ref b);
 // Console.WriteLine($"После обмена: {a} {b}");
 // задача 2 покупка
-void pokupka(ref int a, int b, out string status, out int ostatok)
-{
-    if (a > b)
-    {
-        a = a - b;
-        ostatok = a;
-        status = "Успешно";
+// void pokupka(ref int a, int b, out string status, out int ostatok)
+// {
+//     if (a > b)
+//     {
+//         a = a - b;
+//         ostatok = a;
+//         status = "Успешно";
 
+//     }
+//     else
+//     {
+//         status = "Отказано";
+//         ostatok = a;
+//     }
+    
+
+// }
+// int balance = 5000;
+// int cena = 325;
+// pokupka(ref balance, cena, out string status, out int ostatok);
+// Console.WriteLine($"{status}, остаток: {ostatok}");
+
+
+using System;
+
+// Обычные параметры: нам нужно только прочитать название товара
+// и его цену, изменять исходные переменные не требуется.
+void Info(string name, int price)
+{
+    Console.WriteLine($"Товар: {name}, цена: {price} рублей");
+}
+
+// ref: передаём баланс по ссылке, потому что после покупки
+// исходная переменная с деньгами должна измениться.
+void Pokupka(ref int balance, int price)
+{
+    if (balance >= price)
+    {
+        balance = balance - price;
+        Console.WriteLine("Покупка успешна");
     }
     else
     {
-        status = "Отказано";
-        ostatok = a;
+        Console.WriteLine("Отказано");
     }
-    
-
 }
-int balance = 5000;
+
+// out: метод возвращает статус операции и остаток денег.
+// Остаток передаётся через out, а статус — через return.
+bool Spisat(int balance, int price, out int ostatok)
+{
+    if (price > 0 && balance >= price)
+    {
+        ostatok = balance - price;
+        return true;
+    }
+
+    ostatok = balance;
+    return false;
+}
+
+// Необязательный параметр: подробный вывод нужен не всегда,
+// поэтому по умолчанию detailed равен false.
+void PokazatTovar(string name, int price, bool detailed = false)
+{
+    if (detailed)
+    {
+        Console.WriteLine(
+            $"Подробно: товар {name}, стоимость {price} рублей");
+    }
+    else
+    {
+        Console.WriteLine($"{name} — {price} рублей");
+    }
+}
+
+
+string tovar = "Меч";
 int cena = 325;
-pokupka(ref balance, cena, out string status, out int ostatok);
-Console.WriteLine($"{status}, остаток: {ostatok}");
+int balance = 5000;
+
+// 1. Обычные параметры
+Info(tovar, cena);
+
+// 2. ref
+Pokupka(ref balance, cena);
+Console.WriteLine($"Баланс после покупки: {balance}");
+
+// 3. out
+bool success = Spisat(balance, 500, out int ostatok);
+Console.WriteLine($"Списание успешно: {success}");
+Console.WriteLine($"Остаток после списания: {ostatok}");
+
+// 4. Необязательный параметр и именованный аргумент
+PokazatTovar(tovar, cena);
+PokazatTovar(name: "Щит", price: 700, detailed: true);
 
